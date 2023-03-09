@@ -158,7 +158,7 @@ pub struct IHandle {}
 #[derive(Clone, Copy)]
 pub struct PROM {
     /// Entry function into the Open Firmware services
-    entry_fn: extern "C" fn(*mut Args) -> usize,
+    pub entry_fn: extern "C" fn(*mut Args) -> usize,
     /// Package handle into '/chosen' which holds parameters chosen at runtime
     pub chosen: *const PHandle,
     /// Instance handle into stdout
